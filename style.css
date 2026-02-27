@@ -381,3 +381,67 @@ button:hover {
   transform: translateY(-6px);
   border-color: white;
 }
+/* ---------- MOBILE FIXES ---------- */
+
+@media (max-width: 768px) {
+
+  .hero {
+    min-height: 55vh;
+    padding: 40px 20px;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .features {
+    padding: 40px 20px;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .hero-text h1 {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .navbar ul {
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .feature,
+  .pricing,
+  .deploy,
+  .logos,
+  .status {
+    padding: 60px 20px;
+  }
+
+}
