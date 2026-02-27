@@ -5,10 +5,12 @@ html {
 body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-
-  background-color: #0d0d0d;  /* dark background */
-  color: #ffffff;             /* default text white */
+  background-color: #0d0d0d;
+  color: #ffffff;
 }
+
+/* ---------- NAVBAR ---------- */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -24,13 +26,14 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .nav-actions {
   display: flex;
   gap: 10px;
-  align-items: center;
 }
 
-.login {
+.login,
+.demo {
   background: transparent;
   color: white;
   border: 1px solid #444;
@@ -38,7 +41,9 @@ body {
   border-radius: 6px;
   cursor: pointer;
 }
-.signup {
+
+.signup,
+.start {
   background: white;
   color: black;
   border: none;
@@ -48,118 +53,69 @@ body {
   cursor: pointer;
 }
 
-.signup:hover {
+.signup:hover,
+.start:hover {
   background: #e6e6e6;
 }
 
-.login:hover {
+.login:hover,
+.demo:hover {
   background: #111;
 }
+
+/* ---------- HERO ---------- */
+
 .hero {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: left;
-
+  text-align: center;
   max-width: 900px;
   margin: auto;
   min-height: 80vh;
 }
 
-.hero {
-  min-height: 40vh;
-}
-.hero-text {
-  max-width: 800px;
-  text-align: center;
-}
 .hero-text h1 {
   font-size: 64px;
   font-weight: 700;
   line-height: 1.1;
+  letter-spacing: -0.5px;
 }
 
-.hero-text p,
-.feature-card p {
+.hero-text p {
   color: #aaaaaa;
 }
-.buttons button {
-  padding: 14px 24px;
-  border-radius: 8px;
-  font-size: 15px;
-  font-weight: 500;
-  transition: all 0.2s ease;
-}
+
 .buttons {
   display: flex;
   justify-content: center;
   gap: 15px;
-}
-.start {
-  background: white;
-  color: black;
+  margin-top: 20px;
 }
 
-.start:hover {
-  background: #e6e6e6;
+.buttons button {
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: 0.2s ease;
 }
 
-.demo {
-  background: transparent;
-  color: white;
-  border: 1px solid #444;
-}
-
-.demo:hover {
-  background: #222;
-}
-h1, h2, h3 {
-  letter-spacing: -0.5px;
-}
+/* ---------- FEATURES ---------- */
 
 .features {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-
   max-width: 1000px;
   margin: auto;
   padding: 80px 20px;
 }
 
-
-.logos {
-  text-align: center;
-  padding: 120px 20px;
-  color: #555;
-}
-
-button:hover {
-  opacity: 0.85;
-}
-
-.container {
-  max-width: 1200px;
-  margin: auto;
-}
-.feature {
-  text-align: center;
-  padding: 120px 20px;
-}
-
-.feature h2 {
-  font-size: 36px;
-  margin-bottom: 15px;
-}
-
 .feature-card {
   padding: 25px;
   border-radius: 12px;
- 
-  background-color: #111;
+  background: #111;
   border: 1px solid #222;
-
-  text-align: left;
 }
 
 .feature-card h3 {
@@ -173,9 +129,28 @@ button:hover {
 }
 
 .feature-card:hover {
-  background-color: #1a1a1a;
+  background: #1a1a1a;
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
+
+/* ---------- SECTION ---------- */
+
+.feature,
+.logos {
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.feature h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.logos {
+  color: #555;
+}
+
+/* ---------- FOOTER ---------- */
 
 .footer {
   background: #000;
@@ -188,10 +163,10 @@ button:hover {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 40px;
-
   max-width: 1200px;
   margin: auto;
 }
+
 .footer-column h4 {
   color: white;
   margin-bottom: 15px;
@@ -204,12 +179,20 @@ button:hover {
   font-size: 14px;
   cursor: pointer;
 }
+
 .footer-column p:hover {
   color: white;
 }
+
 .footer-bottom {
   max-width: 1200px;
   margin: 60px auto 0;
   font-size: 13px;
   color: #4da3ff;
+}
+
+/* ---------- GLOBAL ---------- */
+
+button:hover {
+  opacity: 0.85;
 }
