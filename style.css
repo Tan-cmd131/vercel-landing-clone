@@ -17,6 +17,10 @@ body {
   align-items: center;
   padding: 20px 40px;
   border-bottom: 1px solid #222;
+  position: sticky;
+top: 0;
+background: #0d0d0d;
+z-index: 1000;
 }
 
 .navbar ul {
@@ -73,8 +77,28 @@ body {
   max-width: 900px;
   margin: auto;
   min-height: 80vh;
+    position: relative;
+  overflow: hidden;
 }
 
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle,
+    rgba(255,255,255,0.15),
+    rgba(255,255,255,0.05),
+    transparent 70%);
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+.hero-text {
+  position: relative;
+  z-index: 1;
+}
 .hero-text h1 {
   font-size: 64px;
   font-weight: 700;
@@ -84,6 +108,7 @@ body {
 
 .hero-text p {
   color: #aaaaaa;
+
 }
 
 .buttons {
@@ -98,6 +123,36 @@ body {
   border-radius: 8px;
   font-size: 15px;
   transition: 0.2s ease;
+}
+.code-preview {
+  margin-top: 40px;
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: left;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: monospace;
+  color: #00ff88;
+  font-size: 14px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+.trusted {
+  text-align: center;
+  padding: 60px 20px;
+  color: #888;
+}
+
+.trusted-logos {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+  font-weight: 600;
+  color: #555;
 }
 
 /* ---------- FEATURES ---------- */
@@ -195,4 +250,86 @@ body {
 
 button:hover {
   opacity: 0.85;
+}
+
+.pricing {
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.price-card {
+  background: #111;
+  border: 1px solid #222;
+  padding: 30px;
+  border-radius: 12px;
+  width: 220px;
+}
+/* ---------- PRICING BUTTONS ---------- */
+
+.plan-btn {
+  margin-top: 20px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  border: none;
+  background: white;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  width: 100%;
+}
+
+.plan-btn:hover {
+  transform: translateY(-2px);
+  background: #e6e6e6;
+}
+
+.plan-btn.primary {
+  background: #ffffff;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+.plan-btn.primary:hover {
+  box-shadow: 0 0 30px rgba(255,255,255,0.35);
+}
+
+/* outline version (enterprise) */
+.plan-btn.outline {
+  background: transparent;
+  color: white;
+  border: 1px solid #444;
+}
+
+.plan-btn.outline:hover {
+  background: #222;
+}
+
+.popular {
+  border: 1px solid #444;
+  transform: scale(1.05);
+  background: #151515;
+  position: relative;
+}
+.badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  color: black;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+.price-card:hover {
+  transform: translateY(-6px);
+  border-color: white;
 }
