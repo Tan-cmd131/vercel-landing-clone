@@ -13,7 +13,10 @@ body {
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid #222;
+
   align-items: center;
   padding: 20px 40px;
   border-bottom: 1px solid #222;
@@ -27,15 +30,34 @@ z-index: 1000;
   list-style: none;
   display: flex;
   gap: 25px;
-  margin: 0;
+   margin-left: 40px;
   padding: 0;
 }
 
 .nav-actions {
+    margin-left: auto; /* pushes login/signup to right */
   display: flex;
   gap: 10px;
 }
+.menu-item {
+  position: relative;
+  cursor: pointer;
+}
 
+.menu-item::after {
+  content: "▾";
+  font-size: 12px;
+  margin-left: 6px;
+  color: #888;
+}
+.menu-item:hover::after {
+  color: white;
+}
+.menu-item:hover {
+  color: #fff;
+  transform: translateY(-1px);
+  transition: 0.2s ease;
+}
 .login,
 .demo {
   background: transparent;
@@ -145,7 +167,33 @@ z-index: 1000;
   padding: 60px 20px;
   color: #888;
 }
+.trust {
+  text-align: center;
+  padding: 80px 20px;
+}
 
+.trust-text {
+  color: #888;
+  margin-bottom: 40px;
+  font-size: 14px;
+}
+
+.trust-stats {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.trust-stats h3 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.trust-stats p {
+  color: #aaa;
+  font-size: 14px;
+}
 .trusted-logos {
   display: flex;
   justify-content: center;
