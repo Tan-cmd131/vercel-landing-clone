@@ -26,6 +26,19 @@ background: #0d0d0d;
 z-index: 1000;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.logo svg {
+  filter: drop-shadow(0 2px 4px rgba(255, 255, 255, 0.1));
+}
+
 .navbar ul {
   list-style: none;
   display: flex;
